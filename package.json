@@ -1,0 +1,38 @@
+{
+  "name": "convertnodeservicetotypescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevejhiggs/convertNodeServiceToTypescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevejhiggs/convertNodeServiceToTypescript/issues"
+  },
+  "homepage": "https://github.com/stevejhiggs/convertNodeServiceToTypescript#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "config": "^1.26.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "pino-http": "^2.6.1"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^4.3.1",
+    "supertest": "^3.0.0"
+  }
+}
