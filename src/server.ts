@@ -1,9 +1,9 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const config = require('config');
-const registerEndpoints = require('./endpoints');
-const pinoHttp = require('pino-http');
+import * as bodyParser from 'body-parser';
+import * as config from 'config';
+import * as cors from 'cors';
+import * as express from 'express';
+import * as pinoHttp from 'pino-http';
+import registerEndpoints from './endpoints';
 
 const pino = pinoHttp({
   extreme: true,
@@ -13,7 +13,7 @@ const pino = pinoHttp({
 /**
  * Configure the express server
  */
-const createServer = () => {
+export default function createServer(): express.Application {
   const app = express();
   app.set('x-powered-by', false);
   app.use(bodyParser.json());
@@ -27,6 +27,4 @@ const createServer = () => {
 
   registerEndpoints(router);
   return app;
-};
-
-module.exports = createServer;
+}
