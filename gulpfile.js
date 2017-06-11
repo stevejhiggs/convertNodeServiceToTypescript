@@ -5,8 +5,11 @@ const gulpTslint = require('gulp-tslint');
 const tslint = require('tslint');
 
 gulp.task('test', () => {
-  gulp.src('tests/**/*.test.js')
+  return gulp.src('tests/**/*.test.ts')
     .pipe(mocha({
+      compilers: [
+        'ts:ts-node/register'
+      ],
       reporter: 'spec'
     }));
 });
