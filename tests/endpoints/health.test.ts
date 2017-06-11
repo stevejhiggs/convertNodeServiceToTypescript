@@ -1,10 +1,11 @@
-const supertest = require('supertest');
-const createServer = require('../../src/server');
+import 'mocha';
+import * as supertest from 'supertest';
+import createServer from '../../src/server';
 
 // if any of these tests fail you have broken the public contract and every client
 describe('endpoints -> health', () => {
 
-  let request;
+  let request: supertest.SuperTest<supertest.Test>;
 
   before(() => {
     // set up a local, in process version of express
