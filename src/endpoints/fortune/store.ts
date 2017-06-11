@@ -15,4 +15,4 @@ export function getFortune(starSign: string): string|null {
   }
 
   return fortunes[starSign.toLowerCase()] || null;
-};
+}
