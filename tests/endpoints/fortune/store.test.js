@@ -1,6 +1,5 @@
-import 'mocha';
-import { expect } from 'chai';
-import { getFortune } from '../../../src/endpoints/fortune/store';
+const expect = require('chai').expect;
+const getFortune = require('../../../src/endpoints/fortune/store');
 
 describe('endpoints -> fortune -> store -> getFortune', () => {
   it('returns a fortune when given a valid starsign ', () => {

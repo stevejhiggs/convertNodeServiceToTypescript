@@ -1,7 +1,6 @@
-import { RequestHandler } from 'express';
-import { getFortune } from './store';
+const getFortune = require('./store');
 
-const handler: RequestHandler = (req, res) => {
+const handler = (req, res) => {
   const fortune = getFortune(req.params.starSign);
   if (!fortune) {
     return res.status(406).send('unknown star sign');
@@ -10,4 +9,4 @@ const handler: RequestHandler = (req, res) => {
   return res.send(fortune);
 };
 
-export default handler;
+module.exports = handler;

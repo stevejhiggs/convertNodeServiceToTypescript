@@ -9,7 +9,7 @@ const fortunes = {
   scopio: 'and the weather today? Scorpio!'
 };
 
-export function getFortune(starSign: string): string|null {
+module.exports = function getFortune(starSign) {
   if (!starSign) {
     return null;
   }

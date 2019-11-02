@@ -1,9 +1,9 @@
-import bodyParser from 'body-parser';
-import config from 'config';
-import cors from 'cors';
-import express from 'express';
-import pinoHttp from 'pino-http';
-import registerEndpoints from './endpoints/routes';
+const bodyParser = require('body-parser');
+const config = require('config');
+const cors = require('cors');
+const express = require('express');
+const pinoHttp = require('pino-http');
+const registerEndpoints = require('./endpoints/routes');
 
 const pino = pinoHttp({
   level: config.get('logLevel')
@@ -12,7 +12,7 @@ const pino = pinoHttp({
 /**
  * Configure the express server
  */
-export default function createServer(): express.Application {
+module.exports = function createServer() {
   const app = express();
   app.set('x-powered-by', false);
   app.use(bodyParser.json());

@@ -1,2 +1,1 @@
-require('ts-node/register');
-require('./src/listener.ts');
+require('./src/listener');
