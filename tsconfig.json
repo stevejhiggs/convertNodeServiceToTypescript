@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "target": "es6",
-    "module": "commonjs",
-    "strict": true,
-    "sourceMap": false,
-    "skipLibCheck": true,
-    "noImplicitAny": false,
-    "noUnusedLocals": true
+      "moduleResolution": "node",
+      "target": "es2018",
+      "module": "commonjs",
+      "lib": ["es2018", "dom"],
+      "sourceMap": true,
+      "skipLibCheck": true,
+      "declaration": true,
+      "esModuleInterop": true,
+      "outDir": "lib"
   },
   "include": [
-    "**/*.ts"
+      "src/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+      "node_modules"
   ]
 }

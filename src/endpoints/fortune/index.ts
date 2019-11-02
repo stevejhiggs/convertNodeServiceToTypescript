@@ -1,4 +1,4 @@
-import { RequestHandler, Router } from 'express';
+import { RequestHandler } from 'express';
 import { getFortune } from './store';
 
 const handler: RequestHandler = (req, res) => {
@@ -10,6 +10,4 @@ const handler: RequestHandler = (req, res) => {
   return res.send(fortune);
 };
 
-export default function(router: Router) {
-  router.get('/fortune/:starSign', handler);
-}
+export default handler;

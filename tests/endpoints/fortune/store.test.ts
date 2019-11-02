@@ -1,6 +1,5 @@
-/* tslint:disable:no-unused-expression */
-import { expect } from 'chai';
 import 'mocha';
+import { expect } from 'chai';
 import { getFortune } from '../../../src/endpoints/fortune/store';
 
 describe('endpoints -> fortune -> store -> getFortune', () => {

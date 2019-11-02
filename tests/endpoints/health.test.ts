@@ -1,5 +1,5 @@
 import 'mocha';
-import * as supertest from 'supertest';
+import supertest from 'supertest';
 import createServer from '../../src/server';
 
 // if any of these tests fail you have broken the public contract and every client
