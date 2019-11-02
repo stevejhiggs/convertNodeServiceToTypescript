@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha \"tests/**/*.test.ts\"",
+    "build": "tsc",
     "start": "node index.js",
     "start:precompiled": "node ./lib/listener.js"
   },
